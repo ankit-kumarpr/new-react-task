@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Users, User, Menu, X, ArrowLeft } from 'lucide-react';
+import { LayoutDashboard, X  } from 'lucide-react';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     return (
