@@ -1,0 +1,87 @@
+.dashboard-container {
+    padding-bottom: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.dashboard-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Make performance chart full width */
+.chart-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #0ea5e9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: #ef4444;
+    gap: 16px;
+}
+
+.error button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

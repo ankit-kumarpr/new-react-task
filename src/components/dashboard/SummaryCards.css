@@ -1,0 +1,92 @@
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+/* ===== CARD BASE ===== */
+.summary-card {
+    position: relative;
+    padding: 18px 20px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    min-height: 95px;
+    overflow: hidden;
+    transition: all 0.28s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== TEXT ===== */
+.card-content {
+    z-index: 2;
+}
+
+.card-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 3px;
+}
+
+.card-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* ===== ICON ===== */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    transition: all 0.25s ease;
+}
+
+.summary-card:hover .card-icon {
+    transform: scale(1.08);
+}
+
+/* ===== SOFT PROFESSIONAL COLORS ===== */
+
+.summary-card.red {
+    background: linear-gradient(135deg, #ff6a5a, #ff9472);
+}
+
+.summary-card.green {
+    background: linear-gradient(135deg, #16a085, #2ecc71);
+}
+
+.summary-card.blue {
+    background: linear-gradient(135deg, #3a7bd5, #5f9cff);
+}
+
+.summary-card.purple {
+    background: linear-gradient(135deg, #4b6cb7, #6a82fb);
+}
+
+/* Decorative shape */
+.summary-card::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    bottom: -35px;
+    right: -35px;
+}

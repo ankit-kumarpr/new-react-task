@@ -1,0 +1,123 @@
+/* ===== SIDEBAR BASE ===== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: #111827;
+    /* elegant dark */
+    color: #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1f2937;
+    /* border-radius: 20px;
+    margin: 10px; */
+    z-index: 1000;
+    transition: transform 0.28s ease;
+}
+
+/* ===== HEADER ===== */
+.sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    border-bottom: 1px solid #1f2937;
+}
+
+.sidebar-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.6px;
+    color: #60a5fa;
+    /* brand color */
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    display: none;
+}
+
+/* ===== NAV ===== */
+.sidebar-nav {
+    flex: 1;
+    padding: 18px 10px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-bottom: 4px;
+}
+
+/* LINK */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+/* SIMPLE ACTIVE STYLE (clean pill) */
+.nav-link.active {
+    background: #1f2937;
+    color: #ffffff;
+}
+
+/* ICON */
+.nav-icon {
+    margin-right: 10px;
+}
+
+/* ===== FOOTER ===== */
+.sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #1f2937;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* ===== OVERLAY ===== */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+    display: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .close-sidebar {
+        display: block;
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+}

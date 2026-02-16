@@ -1,0 +1,33 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    /* Page Background */
+}
+
+.main-content {
+    margin-left: 260px;
+    /* Sidebar Width */
+    width: calc(100% - 260px);
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    min-height: 100vh;
+}
+
+.content-container {
+    padding: 24px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* When sidebar is open on mobile, Main content stays full width 
+     as sidebar is overlay. No change needed here if using overlay. */
+}

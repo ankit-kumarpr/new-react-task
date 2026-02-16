@@ -1,0 +1,178 @@
+/* ===== CONTAINER ===== */
+.chart-container {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    padding: 18px 20px 20px 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    height: 100%;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+/* ===== TITLE ===== */
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* subtle divider */
+.chart-container h3::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-top: 8px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    opacity: 0.7;
+}
+
+/* ===== ACTIVITY LIST ===== */
+.activity-list-custom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+}
+
+.activity-date {
+    width: 95px;
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+/* bar background */
+.activity-bar-bg {
+    flex: 1;
+    height: 7px;
+    background: #eef2f7;
+    border-radius: 10px;
+    margin: 0 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* animated gradient fill */
+.activity-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #22c55e, #06b6d4);
+    transition: width 0.6s ease;
+}
+
+/* hours text */
+.activity-hours {
+    width: 50px;
+    text-align: right;
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 0.82rem;
+}
+
+/* ===== RECHARTS IMPROVEMENTS ===== */
+
+.custom-tooltip {
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 0.85rem;
+}
+
+.custom-tooltip .label {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+.custom-tooltip .desc {
+    margin: 2px 0;
+    font-weight: 500;
+}
+
+.custom-tooltip .desc.correct {
+    color: #22c55e;
+}
+
+.custom-tooltip .desc.wrong {
+    color: #ef4444;
+}
+
+/* tooltip */
+.recharts-tooltip-wrapper {
+    outline: none;
+}
+
+.recharts-default-tooltip {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+}
+
+/* legend text */
+.recharts-legend-item-text {
+    color: #334155 !important;
+    font-size: 12px !important;
+}
+
+/* axis text */
+.recharts-cartesian-axis-tick-value {
+    fill: #64748b;
+    font-size: 11px;
+}
+
+/* grid lines softer */
+.recharts-cartesian-grid line {
+    stroke: #e2e8f0;
+    stroke-dasharray: 3 3;
+}
+
+/* line chart dots */
+.recharts-dot {
+    transition: all 0.25s ease;
+}
+
+.recharts-dot:hover {
+    r: 6;
+}
+
+/* bar hover glow */
+.recharts-bar-rectangle:hover path {
+    filter: brightness(1.08);
+}
+
+/* ===== SCROLL FIX SMALL SCREENS ===== */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 16px;
+    }
+
+    .activity-date {
+        width: 80px;
+    }
+
+    .activity-hours {
+        width: 40px;
+    }
+}
