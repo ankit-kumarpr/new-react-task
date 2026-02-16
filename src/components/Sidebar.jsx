@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Sidebar.css';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, X  } from 'lucide-react';
